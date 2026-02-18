@@ -112,17 +112,124 @@ namespace If_statements_lesson
             //    else
             //        Console.WriteLine("Better luck next time");
             //}
-            int age;
+            //int bet;
+            //Console.WriteLine("How much would you like to bet? ");
+            //if (int.TryParse(Console.ReadLine(), out bet))
+            //{
+            //    Console.WriteLine("You bet " + bet.ToString("C"));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("That is not a valid number.");
+            //    Console.WriteLine("Your bet will be set to the minimum of $1.00.");
+            //    bet = 1;
+            //int grade;
+            //Console.WriteLine("What was your grade?");
+            //int.TryParse(Console.ReadLine(), out grade);
+            //if (grade < 50)
+            //    Console.WriteLine("That is an F!");
+            //else if(grade <= 65)
+            //    Console.WriteLine("That is a D!");
+            //else if (grade <= 75)
+            //    Console.WriteLine("That is a C!");
+            //else if (grade <= 85)
+            //    Console.WriteLine("That is a B!");
+            //else 
+            //    Console.WriteLine("That is a A!");
 
-            Console.WriteLine("How old are you");
-            int.TryParse(Console.ReadLine(), out age);
-            if (age < 16)
+            //string choice;
+            //Console.WriteLine("What is the name of the 1968 album by The Beatles?:");
+            //Console.WriteLine("a - Band on the Run          b - The Beatles");
+            //Console.WriteLine("c - Abbey Road               d - The White Album");
+            //Console.WriteLine();
+            //Console.Write(": ");
+            //choice = Console.ReadLine().ToLower();
+            //Console.WriteLine();
+            //if (choice == "a")
+            //{
+            //    Console.WriteLine("Thats a Wings album! Not an album by The Beatles");
+            //}
+            //else if (choice == "b")
+            //{
+            //    Console.WriteLine("Correct! The Beatles 1968 album was indeed called The Beatles");
+            //}
+            //else if (choice == "c")
+            //{
+            //    Console.WriteLine("Abbey Road was released in 1969 not 1968!");
+            //}
+            //else if (choice == "d")
+            //{
+            //    Console.WriteLine("Very close, the album is mostly reffered to as The White album but not the offical title");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("This is an invalid choice, try a,b,c,d,");
+            //}
+
+
+            int temp;
+            Console.WriteLine("Please enter the temperature of the H2O: ");
+            if (int.TryParse(Console.ReadLine(), out temp))
             {
-                Console.WriteLine("");
+                if (temp <= 0)
+                    Console.WriteLine("You have a solid.");
+                else if (temp < 100)
+                    Console.WriteLine("You have liquid");
+                else
+                    Console.WriteLine("You have gas!");
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid input");
             }
 
+
+
+
+
+
+
+
+
+            string name;
+            int age;
+            Console.Write("What is your name?: ");
+            name = Console.ReadLine();
+            Console.WriteLine();
+            Console.Write("Ok, " + name + ", how old are you? ");
+            if (int.TryParse(Console.ReadLine(), out age))
+            {
+                Console.WriteLine();
+                if (age < 0)
+                {
+                    Console.WriteLine("I didn't know that fetuses could code!");
+                }
+                else if (age < 16)
+                {
+                    Console.WriteLine("You can't drive.");
+                }
+                else if (age < 18)
+                {
+                    Console.WriteLine("You can't vote.");
+                }
+                else if (age < 25)
+                {
+                    Console.WriteLine("You can't rent a car.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("You can do anything that is legal.");
+            }
         }
+                else
+            {
+                    Console.WriteLine("Invalid Numeric Input");
+            }
+
 }
-}
+
+
 
 
